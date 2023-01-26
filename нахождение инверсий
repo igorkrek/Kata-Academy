@@ -1,0 +1,23 @@
+import java.util.Arrays;   
+import java.util.*;
+import java.util.Scanner;
+public class ClassNameHere {
+public static void main(String[] args) {
+       
+   int i = 5;
+	int[] z = new int[] {1, 7, 6, 4, 5, 9, 8}; // объявление массива 1
+   System.out.println("длина массива - " + z.length);
+   int b = 0;   
+   int a = 0;
+   int c = 0;
+   while (a != z.length) {
+     b = a;
+     while (b != z.length) {
+     if (z[b] > z[a] & b > a) { 
+        System.out.println("инверсия " + z[b] + z[a]);
+     c ++;}
+    b ++;}  
+   a ++;}
+    System.out.println("всего " + c);
+}
+}     
