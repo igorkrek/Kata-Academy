@@ -1,0 +1,105 @@
+import java.util.Scanner;
+public class Main{
+   public static void rom(int sum){
+        switch (sum){
+		case (0): System.out.println("0"); break;
+		case (1): System.out.println("I"); break;
+		case (2): System.out.println("II"); break;
+		case (3): System.out.println("III"); break;
+		case (4): System.out.println("IV"); break;
+		case (5): System.out.println("V"); break;
+		case (6): System.out.println("VI"); break;
+		case (7): System.out.println("VII"); break;
+		case (8): System.out.println("VIII"); break;
+		case (9): System.out.println("IX"); break;
+	            case (10): System.out.println("X"); break;
+		case (11): System.out.println("XI"); break;
+		case (12): System.out.println("XII"); break;
+		case (13): System.out.println("XIII"); break;
+		case (14): System.out.println("XIV"); break;
+		case (15): System.out.println("XV"); break;
+		case (16): System.out.println("XVI"); break;
+		case (17): System.out.println("XVII"); break;
+		case (18): System.out.println("XVIII"); break;
+		case (19): System.out.println("XIX"); break;
+		case (20): System.out.println("XX"); break;
+		case (21): System.out.println("XXI"); break;
+		case (24): System.out.println("XXIV"); break;
+		case (25): System.out.println("XXV"); break;
+		case (27): System.out.println("XXVII"); break;
+		case (28): System.out.println("XXVIII"); break;
+		case (30): System.out.println("XXX"); break;
+		case (32): System.out.println("XXXII"); break;
+		case (35): System.out.println("XXXV"); break;
+		case (36): System.out.println("XXXVI"); break;
+		case (40): System.out.println("XL"); break;
+		case (42): System.out.println("XLII"); break;
+		case (45): System.out.println("VL"); break;
+		case (48): System.out.println("IIL"); break;
+		case (49): System.out.println("IL"); break;
+		case (50): System.out.println("L"); break;
+		case (56): System.out.println("LVI"); break;
+		case (60): System.out.println("LX"); break;
+		case (64): System.out.println("LXIV"); break;
+		case (70): System.out.println("LXX"); break;
+		case (72): System.out.println("LXXII"); break;
+		case (81): System.out.println("LXXXI"); break;
+		case (90): System.out.println("XC"); break;
+		case (100): System.out.println("C"); break;
+		
+		default: break;}
+    }
+     public static void Output(int a, int b, int c, int e){
+        System.out.println("Output:");
+        int f = 0;
+        if (c == 0){
+        switch (e){
+		case (1): System.out.println(a + b); break;
+    	case (2): System.out.println(a - b); break;
+		case (3): System.out.println(a * b); break;
+		case (4): System.out.println(a / b); break;	
+		default: break;}}
+		    else {
+		    switch (e){
+		case (1): f = a + b; rom(f); break;
+    	case (2): if (a < b){System.out.println("в римской системе нет отрицательных чисел");}
+    	else {System.out.println(a - b);} break;
+		case (3): f = a * b; rom(f); break;
+		case (4): f = a / b; rom(f); break;
+		default: break;}}
+		
+     }
+    
+        public static void main(String[] args) {
+        System.out.println("Input : ");
+        Scanner scan = new Scanner(System.in);
+        String n = scan.nextLine ();
+        n = n.trim();
+        char[] result = n.toCharArray();
+    int [] x = {0, 0};
+    int c, d, f, ar;
+    c = 0; d = 0; ar = 0; f = 0;
+    for (char i:result) {
+        switch (i){
+		case ('1'): x[c] = 1; break;
+		case ('2'): x[c] = 2; break;
+		case ('3'): x[c] = 3; break;
+		case ('4'): x[c] = 4; break;
+		case ('5'): x[c] = 5; break;
+		case ('6'): x[c] = 6; break;
+		case ('7'): x[c] = 7; break;
+		case ('8'): x[c] = 8; break;
+		case ('9'): x[c] = 9; break;
+		case ('0'): x[c] = 10; break;
+		case ('I'): x[c]++; ar = 1; break;
+		case ('V'): if (x[c] == 0){ x[c] = 5;} else { x[c] = 4;}; ar = 1; break;
+		case ('X'): if (x[c] == 0){ x[c] = 10;} else { x[c] = 9;}; ar = 1; break;
+		case ('+'): d = 1; c = 1; break;
+		case ('-'): d = 2; c = 1; break;
+		case ('*'): d = 3; c = 1; break;
+		case ('/'): d = 4; c = 1; break;	
+		default: break;}}
+  Output(x[0], x[1], ar, d);
+ 
+     }  
+        }
