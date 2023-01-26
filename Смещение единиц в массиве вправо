@@ -1,0 +1,21 @@
+import java.util.Arrays;   
+import java.util.*;
+public class ClassNameHere {
+   public static void main(String[] args){
+   System.out.println("Сместим все единицы массива вправо: ");
+	int[] z = new int[]{0,1,0,1,1,0,1,1,0,0,1}; // объявление массива 1
+   System.out.println("длина массива - " + z.length);
+   int a = 0;
+       while (a != z.length) {
+	    int b = 0;
+	    while (b != z.length) {
+	        
+          if (z[a] < z[b]){
+	           int m = z[a];
+             z[a] = z[b];
+             z[b] = m;
+	            } b ++;
+          } a ++;}
+	   
+      System.out.println("Итог z=" + Arrays.toString(z));
+   }}
