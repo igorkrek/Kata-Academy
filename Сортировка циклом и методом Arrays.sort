@@ -1,0 +1,26 @@
+import java.util.Arrays;   
+import java.util.*;
+public class ClassNameHere {
+   public static void main(String[] args){
+      
+   
+	System.out.println("привет! Упорядочим массив в порядке возрастания:");
+	int[] z = new int[]{10,9,14,23,15,0,0}; // объявление массива
+   int a = 0;
+      System.out.println("длина массива - " + z.length);
+   while (a != z.length) {
+	    int b = a;
+	    while (b != z.length) {
+	        
+          if (z[a] > z[b]){
+	            int m = z[a];
+	            z[a] = z[b];
+	            z[b] = m;
+	            } b ++;
+          } a ++;}
+	   System.out.println("Сортировка циклом - " + Arrays.toString(z));
+      Arrays.sort(z); 
+      System.out.println("Сортировка методом Arrays.sort - " + Arrays.toString(z));
+
+      
+   }}
