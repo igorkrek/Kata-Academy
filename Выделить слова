@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main{
+        public static void main(String[] args) {
+        System.out.println("Input : ");
+        Scanner scan = new Scanner(System.in);
+        String n = scan.nextLine ();
+        char[] result = n.toCharArray();
+        int j = 0;
+        int k = 0;
+    for (char i:result) {
+    int ascii = i;     
+    if  ((ascii > 96) & (ascii < 123)) { j = j + 1;}
+    else if ((ascii > 64) & (ascii < 91)) { k = k + 1;}
+    }
+if  ((j == result.length) | ((j == result.length - 1) & (k == 1))) { 
+ System.out.println((char) 27 + "[33m"  + n + (char)27  + "[0m");}
+ else {System.out.println(n);}
+ 
+     }  
+        }
