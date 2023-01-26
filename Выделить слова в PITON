@@ -1,0 +1,18 @@
+print ('input:')
+string = input() 
+listOfChars = list()
+j=0
+k = 0
+a=0
+for ch in string:
+    listOfChars.append(ch)
+    a = ord(ch)
+    if  (a > 96 and a < 123) or (a > 1071 and a < 1104): j+=1
+    if  (a > 64 and a < 91) or (a > 1039 and a < 1072): k+=1
+if j == len(listOfChars) - 1 and  k ==1:
+    print('Удовлетворяет условию, выделяем')
+    print("\033[4m\033[37m\033[44m{}\033[0m".format(string))
+    
+else: 
+    print('НЕ удовлетворяет условию, не выделяем')
+    print(string)
