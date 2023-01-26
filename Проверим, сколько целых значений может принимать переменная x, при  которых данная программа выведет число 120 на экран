@@ -1,0 +1,18 @@
+import java.util.Arrays;   
+import java.util.*;
+public class ClassNameHere {
+public static void main(String[] args){
+System.out.println("привет! Проверим, сколько целых значений может принимать переменная x, при  которых данная программа выведет число 120 на экран");
+int x = 0;
+int a = 0;
+x = 2 * (x / 10);
+float n = 1;
+   while (x < 300){
+    x = x + 12;
+    n = n * 2 + x; x++;
+System.out.println(n);  //120
+      if (n == 144.0) 
+          {a++;}}
+System.out.println("Число целых значений X = " + a);
+      
+}}
